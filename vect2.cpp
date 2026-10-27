@@ -1,30 +1,23 @@
 #include "vect2.hpp"
 
-vect2::vect2() : x(0), y(0)
-{
-}
+vect2::vect2() : x(0), y(0) {}
 
-vect2::vect2(int num1, int num2) : x(num1), y(num2)
-{
-}
+vect2::~vect2() {}
 
-vect2::vect2(const vect2 &source) : x(source.x), y(source.y)
-{
-}
+vect2::vect2(int num1, int num2) : x(num1), y(num2) {}
 
-vect2 &vect2::operator=(const vect2 &source)
+vect2::vect2(const vect2& src) : x(src.x), y(src.y) {}
+
+vect2 &vect2::operator=(const vect2 &src)
 {
-	if (this != &source)
+	if (this != &src)
 	{
-		x = source.x;
-		y = source.y;
+		x = src.x;
+		y = src.y;
 	}
 	return (*this);
 }
 
-vect2::~vect2()
-{
-}
 
 int vect2::operator[](int index) const
 {

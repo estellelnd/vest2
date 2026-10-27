@@ -11,8 +11,8 @@ class vect2
 	public:
 		vect2();
 		vect2(int num1, int num2);
-		vect2(const vect2& source);
-		vect2& operator=(const vect2& source);
+		vect2(const vect2& src);
+		vect2& operator=(const vect2& src);
 
 		int operator[](int index) const;
 		int& operator[](int index); // NON-CONST
